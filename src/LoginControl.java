@@ -48,6 +48,7 @@ public class LoginControl {
         if (userInput == null) {
             setUsernameStatus();
         }
+
         String passwordInput = password.getText();
 
         if (passwordInput == null) {
@@ -57,7 +58,9 @@ public class LoginControl {
         User user = searchUser(userInput);
 
         if (user == null) {
-            showAlert(event);
+            setUsernameStatus();
+            setPasswordStatus();
+            //showAlert(event);
             return;
         }
 
@@ -87,9 +90,17 @@ public class LoginControl {
     }
 
 
-    public User searchUser(String username) {
+    public User searchUser(String username1) {
+
+        if (username.getText() == null) {
+            setUsernameStatus();
+        }
+
+        if (password.getText() == null) {
+            setPasswordStatus();
+        }
         for (User checkUser : users) {
-            if (checkUser.getUsername().equals(username)) {
+            if (checkUser.getUsername().equals(username1)) {
                 return checkUser;
             }
         }
