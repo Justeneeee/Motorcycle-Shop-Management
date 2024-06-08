@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeControl">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="579.0" prefWidth="241.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="153.0" layoutX="68.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/Motor.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="32.0" layoutY="107.0" prefHeight="73.0" prefWidth="177.0" text="Welcome, Admin!" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="121.0" layoutX="120.0" layoutY="179.0" startX="-120.0" />
+            <Button fx:id="homeButton" layoutX="42.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: gray;" text="Home">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="56.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/home.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="addPartButton" layoutX="42.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: gray;" text="Add Parts">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="47.0" />
+               </padding>
+            </Button>
+            <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="54.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/add.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="sellPartButton" layoutX="42.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: gray;" text="Sell Parts">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="47.0" />
+               </padding>
+            </Button>
+            <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="54.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/sell.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="logoutButton" layoutX="15.0" layoutY="533.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: gray;" text="Logout">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Arial Bold" size="10.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <ImageView fitHeight="18.0" fitWidth="26.0" layoutX="23.0" layoutY="539.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/logout.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="241.0" layoutY="-2.0" prefHeight="579.0" prefWidth="571.0" style="-fx-background-color: #404040;">
+         <children>
+            <TableView fx:id="tableView" layoutX="33.0" layoutY="183.0" prefHeight="382.0" prefWidth="506.0">
+               <columns>
+                  <TableColumn fx:id="brandColumn" prefWidth="139.0" text="Brand" />
+                  <TableColumn fx:id="typeColumn" prefWidth="182.0" text="Type" />
+                  <TableColumn fx:id="qtyColumn" prefWidth="59.0" text="QTY" />
+                  <TableColumn fx:id="priceColumn" prefWidth="125.0" text="Price" />
+               </columns>
+            </TableView>
+            <Line endX="453.0" layoutX="118.0" layoutY="112.0" startX="-118.0" stroke="WHITE" />
+            <Label alignment="CENTER" layoutX="98.0" layoutY="14.0" prefHeight="81.0" prefWidth="375.0" text="Inventory" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="55.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="-42.0" layoutY="89.0" prefHeight="81.0" prefWidth="375.0" text="Remaining parts:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchField" layoutX="103.0" layoutY="152.0" prefHeight="25.0" prefWidth="158.0" />
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="154.0" prefHeight="18.0" prefWidth="132.0" text="Search:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

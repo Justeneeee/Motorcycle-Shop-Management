@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddPartControl">
+    <children>
+        <Pane layoutY="-1.0" prefHeight="579.0" prefWidth="241.0" style="-fx-background-color: white;">
+            <children>
+                <ImageView fitHeight="105.0" fitWidth="153.0" layoutX="68.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@pics/Motor.png" />
+                    </image>
+                </ImageView>
+                <Label alignment="CENTER" layoutX="32.0" layoutY="107.0" prefHeight="73.0" prefWidth="177.0" text="Welcome, Admin!" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+                </Label>
+                <Line endX="121.0" layoutX="120.0" layoutY="179.0" startX="-120.0" />
+                <Button fx:id="homeButton" layoutX="42.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: gray;" text="Home">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets left="40.0" />
+                    </padding>
+                </Button>
+                <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="56.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@pics/home.jpg" />
+                    </image>
+                </ImageView>
+                <Button fx:id="addPartButton" layoutX="42.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: gray;" text="Add Parts">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets left="47.0" />
+                    </padding>
+                </Button>
+                <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="54.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@pics/add.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="sellPartButton" layoutX="42.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: gray;" text="Sell Parts">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets left="47.0" />
+                    </padding>
+                </Button>
+                <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="54.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@pics/sell.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="logoutButton" layoutX="15.0" layoutY="533.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: gray;" text="Logout">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <font>
+                        <Font name="Arial Bold" size="10.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Button>
+                <ImageView fitHeight="18.0" fitWidth="26.0" layoutX="23.0" layoutY="539.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@pics/logout.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="241.0" layoutY="-2.0" prefHeight="579.0" prefWidth="571.0" style="-fx-background-color: #404040;">
+            <children>
+                <Line endX="453.0" layoutX="118.0" layoutY="112.0" startX="-118.0" stroke="WHITE" />
+                <Label alignment="CENTER" layoutX="98.0" layoutY="14.0" prefHeight="81.0" prefWidth="375.0" text="Add Part" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="55.0" />
+                    </font>
+                </Label>
+                <Pane layoutX="20.0" layoutY="164.0" prefHeight="327.0" prefWidth="219.0" style="-fx-background-color: #7f7f7f;">
+                    <children>
+                        <Label alignment="CENTER" layoutX="-16.0" prefHeight="28.0" prefWidth="105.0" text="Brand:" textAlignment="JUSTIFY">
+                            <font>
+                                <Font name="Arial Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="brandField" layoutX="16.0" layoutY="28.0" prefHeight="1.0" prefWidth="187.0" />
+                        <Label alignment="CENTER" layoutX="-20.0" layoutY="60.0" prefHeight="28.0" prefWidth="105.0" text="Type:" textAlignment="JUSTIFY">
+                            <font>
+                                <Font name="Arial Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="typeField" layoutX="16.0" layoutY="88.0" prefHeight="1.0" prefWidth="187.0" />
+                        <Label alignment="CENTER" layoutX="-12.0" layoutY="116.0" prefHeight="28.0" prefWidth="105.0" text="Quantity:" textAlignment="JUSTIFY">
+                            <font>
+                                <Font name="Arial Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="quantityField" layoutX="16.0" layoutY="142.0" prefHeight="1.0" prefWidth="187.0" />
+                        <Label alignment="CENTER" layoutX="-20.0" layoutY="173.0" prefHeight="28.0" prefWidth="105.0" text="Price:" textAlignment="JUSTIFY">
+                            <font>
+                                <Font name="Arial Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="priceField" layoutX="16.0" layoutY="201.0" prefHeight="1.0" prefWidth="187.0" />
+                        <Button fx:id="addButton" layoutX="57.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="50.0" prefWidth="105.0" style="-fx-border-color: #7f7f7f;" text="Add" />
+                    </children>
+                </Pane>
+                <TableView fx:id="tableView" layoutX="254.0" layoutY="218.0" prefHeight="345.0" prefWidth="307.0">
+                    <columns>
+                        <TableColumn fx:id="brandColumn" prefWidth="89.0" text="Brand" />
+                        <TableColumn fx:id="typeColumn" prefWidth="93.0" text="Type" />
+                        <TableColumn fx:id="qtyColumn" prefWidth="45.0" text="QTY" />
+                        <TableColumn fx:id="priceColumn" prefWidth="79.0" text="Price" />
+                    </columns>
+                </TableView>
+                <Label alignment="CENTER" layoutX="254.0" layoutY="152.0" prefHeight="38.0" prefWidth="52.0" text="Search:" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="searchField" layoutX="310.0" layoutY="158.0" prefHeight="25.0" prefWidth="105.0" />
+                <Button layoutX="253.0" layoutY="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Delete" />
+                <Button fx:id="addQuantityButton" layoutX="360.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleAddQuantity" prefHeight="25.0" prefWidth="95.0" text="Add Quantity" />
+                <Button fx:id="removeQuantityButton" layoutX="462.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleRemoveQuantity" prefHeight="25.0" prefWidth="95.0" text="Remove Quantity">
+               <font>
+                  <Font size="9.0" />
+               </font></Button>
+            </children>
+        </Pane>
+    </children>
+</Pane>
