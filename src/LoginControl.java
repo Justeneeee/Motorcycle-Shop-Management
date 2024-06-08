@@ -50,6 +50,10 @@ public class LoginControl {
         }
         String passwordInput = password.getText();
 
+        if (passwordInput == null) {
+            setPasswordStatus();
+        }
+
         User user = searchUser(userInput);
 
         if (user == null) {
