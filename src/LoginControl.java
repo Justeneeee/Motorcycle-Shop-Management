@@ -3,6 +3,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -17,6 +18,11 @@ public class LoginControl {
     private TextField username;
     @FXML
     private TextField password;
+    @FXML
+    private Label usernameStatus;
+    @FXML
+    private Label passwordStatus;
+
 
 
     @FXML
@@ -38,6 +44,10 @@ public class LoginControl {
     @FXML
     void login(ActionEvent event) {
         String userInput = username.getText();
+
+        if (userInput == null) {
+            setUsernameStatus();
+        }
         String passwordInput = password.getText();
 
         User user = searchUser(userInput);
@@ -62,6 +72,14 @@ public class LoginControl {
         } else {
             showAlert(event);
         }
+    }
+
+    private void setUsernameStatus() {
+        usernameStatus.setText("This field is required!");
+    }
+
+    private void setPasswordStatus() {
+        passwordStatus.setText("This field is required!");
     }
 
 
